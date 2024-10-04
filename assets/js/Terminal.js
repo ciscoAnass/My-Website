@@ -23,10 +23,12 @@ function handleCommand(command) {
         toggleSection('education');
     } else if (command === 'echo $contact_info') {
         toggleSection('contact');
+    } else if (command === 'apt install cv') {
+        toggleSection('cv');
     } else if (command === 'clear') {
         document.getElementById('output').innerHTML = '';
     } else if (command === 'help') {
-        output.innerHTML += `\nAvailable commands:\nwhoami\nls -l /skills\ncat /var/log/history.log\ngit log --oneline /projects\ncat /etc/education.conf\necho $CONTACT_INFO\nclear`;
+        output.innerHTML += `\nAvailable commands:\nwhoami\nls -l /skills\ncat /var/log/history.log\ngit log --oneline /projects\ncat /etc/education.conf\necho $CONTACT_INFO\napt install cv\nclear`;
     } else {
         output.innerHTML += `\nCommand not found: ${command}`;
     }
@@ -71,7 +73,8 @@ function autocompleteCommand() {
         'cat /var/log/history.log',
         'git log --oneline /projects',
         'cat /etc/education.conf',
-        'echo $contact_info'
+        'echo $contact_info',
+        'apt install cv'
     ];
     const matchingCommands = commands.filter(cmd => cmd.startsWith(value));
     if (matchingCommands.length === 1) {
