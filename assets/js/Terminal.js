@@ -13,22 +13,22 @@ function handleCommand(command) {
     const output = document.getElementById('output');
     if (command === 'whoami') {
         toggleSection('whoami');
-    } else if (command === 'ls -l /skills') {
+    } else if (command === 'ls /skills') {
         toggleSection('skills');
     } else if (command === 'cat /var/log/history.log') {
         toggleSection('experience');
-    } else if (command === 'git log --oneline /projects') {
+    } else if (command === 'git clone projects') {
         toggleSection('projects');
     } else if (command === 'cat /etc/education.conf') {
         toggleSection('education');
-    } else if (command === 'echo $contact_info') {
+    } else if (command === 'echo $contact') {
         toggleSection('contact');
     } else if (command === 'apt install cv') {
         toggleSection('cv');
     } else if (command === 'clear') {
         document.getElementById('output').innerHTML = '';
     } else if (command === 'help') {
-        output.innerHTML += `\nAvailable commands:\nwhoami\nls -l /skills\ncat /var/log/history.log\ngit log --oneline /projects\ncat /etc/education.conf\necho $CONTACT_INFO\napt install cv\nclear`;
+        output.innerHTML += `\nAvailable commands:\nwhoami\nls /skills\ncat /var/log/history.log\ngit clone projects\ncat /etc/education.conf\necho $CONTACT\napt install cv\nclear`;
     } else {
         output.innerHTML += `\nCommand not found: ${command}`;
     }
@@ -69,11 +69,11 @@ function autocompleteCommand() {
     const value = input.value.trim().toLowerCase();
     const commands = [
         'whoami',
-        'ls -l /skills',
+        'ls /skills',
         'cat /var/log/history.log',
-        'git log --oneline /projects',
+        'git clone projects',
         'cat /etc/education.conf',
-        'echo $contact_info',
+        'echo $contact',
         'apt install cv'
     ];
     const matchingCommands = commands.filter(cmd => cmd.startsWith(value));
