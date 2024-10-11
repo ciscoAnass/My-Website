@@ -811,6 +811,83 @@ img{
     visibility: visible;
 }
 
+
+
+/*==================== Certificaciones ====================*/
+
+.certifications__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+    gap: 2rem;
+}
+
+.certification__card {
+    background-color: var(--container-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 280px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.certification__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(2, 130, 194, 0.2);
+}
+
+.certification__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.certification__title {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+}
+
+.certification__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.certification__button {
+    display: inline-flex;
+    align-items: center;
+    color: #0282c2;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    transition: 0.3s;
+}
+
+.certification__button:hover {
+    color: #ffc300;
+}
+
+.certification__button-icon {
+    font-size: 1rem;
+    transition: 0.3s;
+    margin-left: 0.25rem;
+}
+
+.certification__button:hover .certification__button-icon {
+    transform: translateX(0.25rem);
+}
+
+@media screen and (max-width: 350px) {
+    .certifications__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /*==================== PORTFOLIO ====================*/
 .portfolio__container{
     overflow: initial;
@@ -1425,3 +1502,4 @@ img{
     }
     
 }
+
