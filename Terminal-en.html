@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <title>Anass Assim - System & Network Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="assets/css/Terminal.css">
+
+</head>
+<body>
+    <div id="show-terminal-btn" onclick="showTerminal()">Open Terminal</div>
+    
+    <div class="container hidden">
+        <div class="terminal-header">
+            <div class="dots">
+                <div class="dot-red" onclick="redirectToIndex()"></div>
+                <div class="dot-yellow" onclick="toggleFullscreen()"></div>
+                <div class="dot-green" onclick="hideTerminal()"></div>
+            </div>
+            <div class="title">Terminal - Anass Assim</div>
+            <div></div>
+        </div>
+        <div id="terminal" onclick="focusInput()">
+            <div id="output">Welcome to Anass Assim's interactive wallet terminal! 
+                Type "help" to see the available commands</div>
+            <div id="input-line">
+                <span id="prompt">guest@anassassim-portfolio:~$</span>
+                <input type="text" id="command-input" autofocus>
+            </div>
+        </div>
+
+        <section id="whoami" class="hidden">
+            <h2>$ whoami</h2>
+            <p>Anass Assim - Sys and Network Admin</p>
+            <p>Experience: 3 years</p>
+            <p>Skills: Network Security, Cloud Computing, Virtualization, Linux Administration</p>
+            <p>Passion: Optimizing and securing IT infrastructures</p>            
+        </section>
+
+        <section id="skills" class="hidden">
+            <h2>$ ls /skills</h2>
+            <ul>
+                <li>Network Administration</li>
+                <li>Cloud Computing</li>
+                <li>Cybersecurity</li>
+                <li>Linux Administration</li>
+                <li>Virtualization</li>
+                <li>Scripting (Bash, Python)</li>                
+            </ul>
+        </section>
+
+        <section id="experience" class="hidden">
+            <h2>$ cat /var/log/history.log</h2>
+            <h3>Assembly Technician</h3>
+            <p>casaconfig.ma | June 2024 - September 2024</p>
+            <ul>
+                <li>Assembly and installation of computer equipment</li>
+                <li>Performed hardware and software testing</li>
+                <li>Optimized assembly times to improve team efficiency</li>            
+            </ul>
+            <br>
+            <p>***********************************************************************************</p>
+            <h3>Junior System Administrator</h3>
+            <p>DIGITAL HARD Ltd. | April 2021 - September 2022</p>
+            <ul>
+                <li>Maintained and administered company servers and systems</li>
+                <li>Monitored system performance and resolved technical issues</li>
+                <li>Assisted in implementing security updates and patches</li>
+            </ul>            
+        </section>
+
+        <section id="projects" class="hidden">
+            <h2>$ git clone projects</h2>
+            <ul>
+                <li>Project A - NasCheck: Google Chrome extension for taking quick notes and saving reminders</li>
+                <li>Project B - SysInfo: Tool for monitoring Linux system performance in real time</li>
+                <li>Project C - BulkUser Creation: Linux script for automated mass user creation</li>
+                <li>Project D - FileSync: File synchronization tool across multiple devices to keep data updated and accessible anywhere</li>
+            </ul>            
+        </section>
+
+        <section id="education" class="hidden">
+            <h2>$ cat /etc/education.conf</h2>
+            <p>&gt; Science Baccalaureate - Victor Hugo School, Morocco</p>
+            <p>&gt; Specialized Technician in Computer Networks - CFMOTI NTIC 1</p>
+            <p>&gt; Higher Degree in Networked IT Systems Administration (ASIR) - I.E.S Rodrigo Caro (Currently studying)</p>            
+        </section>
+
+        <section id="contact" class="hidden">
+            <h2>$ echo $CONTACT</h2>
+            <p>	&gt; Email: anass.assim.2010@gmail.com</p>
+            <p>	&gt; Phone: +34 662 055 990 </p>
+            <p>	&gt; LinkedIn: <a href="https://www.linkedin.com/in/anass-assim/?locale=en_US" target="_blank">linkedin.com/in/anass-assim/</a></p>
+        </section>
+
+        <section id="cv" class="hidden">
+        <center>
+            <h2>$ apt install cv</h2>
+            <a download="" href="assets/pdf/CV-EN.pdf" class="button button--flex">
+                <button class="button">
+                    <span class="button_lg">
+                        <span class="button_sl"></span>
+                        <span class="button_text">Download My CV</span>
+                    </span>
+                </button>
+            </a>    
+        </center>       
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/ciscoanass" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anass-assim" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/ciscoanass" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="assets/js/Terminal.js"></script>
+</body>
+</html>
