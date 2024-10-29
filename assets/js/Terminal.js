@@ -28,7 +28,7 @@ function handleCommand(command) {
     } else if (command === 'clear') {
         document.getElementById('output').innerHTML = '';
     } else if (command === 'help') {
-        output.innerHTML += `\nAvailable commands:\nwhoami\nls /skills\ncat /var/log/history.log\ngit clone projects\ncat /etc/education.conf\necho $CONTACT\napt install cv\nclear`;
+        output.innerHTML += `\n\nAvailable commands:\n\n<b>whoami</b>                           : About Anass.\n<b>ls /skills</b>                       : List skills.\n<b>cat /var/log/history.log</b>         : Job experience.\n<b>git clone projects</b>               : View projects.\n<b>cat /etc/education.conf</b>          : Education background.\n<b>echo $CONTACT</b>                    : Contact info.\n<b>apt install cv</b>                   : Download My CV.\n<b>clear</b>                            : Clear screen.`;
     } else {
         output.innerHTML += `\nCommand not found: ${command}`;
     }
