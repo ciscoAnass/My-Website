@@ -28,7 +28,9 @@ function handleCommand(command) {
     } else if (command === 'clear') {
         document.getElementById('output').innerHTML = '';
     } else if (command === 'help') {
-        output.innerHTML += `\n\nAvailable commands:\n\n<b>whoami</b>                           : About Anass.\n<b>ls /skills</b>                       : List skills.\n<b>cat /var/log/history.log</b>         : Job experience.\n<b>git clone projects</b>               : View projects.\n<b>cat /etc/education.conf</b>          : Education background.\n<b>echo $CONTACT</b>                    : Contact info.\n<b>apt install cv</b>                   : Download My CV.\n<b>clear</b>                            : Clear screen.`;
+        output.innerHTML += `\n\nAvailable commands:\n\n<b>whoami</b>                           : About Anass.\n<b>ls /skills</b>                       : List skills.\n<b>cat /var/log/history.log</b>         : Job experience.\n<b>git clone projects</b>               : View projects.\n<b>cat /etc/education.conf</b>          : Education background.\n<b>echo $CONTACT</b>                    : Contact info.\n<b>apt install cv</b>                   : Download My CV.\n<b>clear</b>                            : Clear screen.\n<b>exit</b>                             : Back to Home Page.`;
+    } else if (command === 'exit') {
+        redirectToIndex();
     } else {
         output.innerHTML += `\nCommand not found: ${command}`;
     }
@@ -74,7 +76,8 @@ function autocompleteCommand() {
         'git clone projects',
         'cat /etc/education.conf',
         'echo $contact',
-        'apt install cv'
+        'apt install cv',
+        'exit'
     ];
     const matchingCommands = commands.filter(cmd => cmd.startsWith(value));
     if (matchingCommands.length === 1) {
