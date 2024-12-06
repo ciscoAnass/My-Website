@@ -623,6 +623,24 @@ img{
 .skills__cplus{
     width: 20%;
 }
+.skills__git{
+    width: 90%;
+}
+.skills__ansible{
+    width: 90%;
+}
+.skills__aws{
+    width: 50%;
+}
+.skills__kuber{
+    width: 40%;
+}
+.skills__docker{
+    width: 70%;
+}
+.skills__monitorization{
+    width: 90%;
+}
 
 .skills__close .skills__list{
     height: 0;
